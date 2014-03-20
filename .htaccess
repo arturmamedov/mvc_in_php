@@ -1,0 +1,5 @@
+# Impostiamo la cofifica utf8 (la mia preferita)
+AddDefaultCharset utf8
+
+# Per Quando saremo pigri
+php_flag short_open_tag on

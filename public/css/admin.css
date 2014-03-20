@@ -1,0 +1,131 @@
+body {
+	font-family: Calibri, sans-serif;
+	font-size: 1.1em;
+	color: #0e0e0e;
+	width:980px;
+}
+
+#homeNav {
+	width:570px;
+	margin:40px auto;
+	font-size: 1.4em;
+}
+#homeNav li{
+	float:left;
+	margin-right:30px;
+}
+#homeNav a{
+	color:#f00;
+	font-weight:400;
+	text-decoration:none;
+}
+#homeNav a:hover{
+	font-weight:800;
+}
+
+h1{
+	margin-top:30px;;
+	text-align:center;
+	color:#666;
+	font-size:2.2em;
+}
+
+
+
+
+#TableGestione {
+	color:#0099ff;
+	width:548px; 
+	margin:50px 70px 10px;
+	border: 1px solid #999;
+	}
+#TableGestione a{
+	color:#0099ff;
+	text-decoration:none;
+	}
+#TableGestione a:hover{
+	color:#000;
+	}
+#TableGestione th {
+	color:#fff;
+	font-family:Verdana,sans-serif;
+	padding:3px;
+	background-color:#999;
+	border-left:1px solid #fff;
+	}
+.firstTableItem {
+	border-left:1px solid #999 !important;
+	}
+#TableGestione  tr ,#TableGestione  td{
+	border: 1px solid #999;
+	}
+#TableGestione  td{
+	padding:4px;
+	}
+#TableGestione  p{
+	margin-top:4px;
+	}
+	
+.TableGestioneRightArrow {
+    background-image: url("../img/arrow_right.gif");
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 12px;
+	margin:4px 5px;
+    text-indent: -9999px;
+    width: 9px;
+	}
+.TableGestioneAlignCenter, #TableGestione th { text-align:center;}
+
+.TableGestioneVisibleNo {
+	color:red;
+	background-image: url("../img/icon_novis.gif");
+    background-repeat: no-repeat;
+    display: block;
+	margin:0 auto;
+    height: 16px;
+    text-indent: -9999px;
+    width: 16px;
+	}
+.TableGestioneVisibleYes {
+	color:green;
+	background-image: url("../img/icon_vis.gif");
+    background-repeat: no-repeat;
+    display: block;
+	margin:0 auto;
+    height: 16px;
+    text-indent: -9999px;
+    width: 16px;
+	}
+.TableGestioneEdit{
+	background-image: url("../img/icon_edit.gif");
+    background-repeat: no-repeat;
+    display: block;
+	margin:0 auto;
+    height: 30px;
+    text-indent: -9999px;
+    width: 30px;
+	}
+.TableGestioneDel{
+	background-image: url("../img/icon_delete.gif");
+    background-repeat: no-repeat;
+    display: block;
+	margin:0 auto;
+    height: 30px;
+    text-indent: -9999px;
+    width: 30px;
+	}
+.manageLink {display:block; text-decoration:none; color:#fff; background-color:#a3ff00; width:215px; border:1px solid #000; padding:6px; margin-left:70px;}
+
+.manageWindow {background:#dddddd; border:1px solid #000; border-radius:7px; margin:20px auto 10px; width:400px; padding:20px;}
+.manageWindow h3 {color:#000; font:1.3em Calibri, sans-serif; text-align:center; margin-bottom:10px;}
+.manageWindow input {float:right;}
+.manageWindow select {width:100px; margin:0 0 10px 250px;}
+.manageWindow p {margin-bottom:7px;}
+.manageWindow span {color:#f00;}
+	
+/* clear floats */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
