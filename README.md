@@ -12,3 +12,7 @@ con tecniche di ereditarieta', poliformismo e architettura MVC - Model View Cont
 creaiamo un applicazione web database che assomiglia ad un CMS - Content Managment System
 di un sito da visita, con possibilita' di creare punti menu e pagine correlate
 ... ... http://obiv.it/
+
+
+The MIT License (MIT)
+Copyright (c) 2011-2014 Artur Mamedov
