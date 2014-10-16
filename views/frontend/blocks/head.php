@@ -9,5 +9,6 @@
 
 <link rel="stylesheet" href="/public/css/reset.css" media="all">
 <link rel="stylesheet" href="/public/css/style.css" media="all">
+
 </head>
 <body>

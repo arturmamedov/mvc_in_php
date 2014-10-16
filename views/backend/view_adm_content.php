@@ -68,4 +68,4 @@
 ?>
 <?=$liContent;?>
 </table>
-<a href="?content&action=create" class="manageLink" title="Crea una nuovo pagina!">Crea una nuovo pagina!</a>
+<a href="?content&action=create" class="btn btn-success" title="Crea una nuovo pagina!">Crea una nuovo pagina!</a>

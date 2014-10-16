@@ -6,9 +6,9 @@ class ModContent {
 	private $mysqli = null;
 	
 	function __construct(){
-		$this->mysqli = new Mysqlimproved_Driver();
-		
-		$this->dbTable = 'mvc_page';
+            $this->mysqli = new Mysqlimproved_Driver();
+
+            $this->dbTable = 'mvc_page';
 	}
 	/* Funzione di estrazione dati in base al page_id
 	*/
@@ -91,13 +91,14 @@ class ModContent {
 	*	menu_visible	'0','1'		se il menu e visibile o no
 	*	menu_position	int			la posizione , l'ordine, del menu
 	*/
-	function create($menu_id, $menu_name, $menu_title, $menu_visible, $menu_position){
-		$this->mysqli->prepare("INSERT INTO {$this->dbTable} (menu_id, menu_name, menu_title, menu_visible, menu_position) 
-					VALUES ('$menu_id', '$menu_name', '$menu_title', '$menu_visible', '$menu_position')");
-		
-		$this->mysqli->query(); // eseguimo la query
-		
-		return true;
+        function create($page_id, $keywords, $description, $title, $titleText, $pageText, $active = 1){
+            $this->mysqli->prepare("INSERT INTO {$this->dbTable} 
+                (page_id, page_keywords, page_description, page_title, page_titleText, page_text, active) 
+                VALUES ('{$page_id}', '{$keywords}', '{$description}', '{$title}', '{$titleText}', '{$pageText}', '{$active}')");
+
+            $this->mysqli->query(); // eseguimo la query
+
+            return true;
 	}
 }
 ?>

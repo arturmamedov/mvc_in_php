@@ -9,6 +9,10 @@ session_start();
 
 <link rel="stylesheet" href="/public/css/reset.css" media="all">
 <link rel="stylesheet" href="/public/css/admin.css" media="all">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 
 <body>

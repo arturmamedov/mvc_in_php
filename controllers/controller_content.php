@@ -1,36 +1,45 @@
 <?php
 require_once ROOT.DS."modules".DS."module_content.php";
+require_once ROOT.DS.'libraries'.DS.'FormProcessor'.DS.'FormProcessor_Content.php';
 
 class ConContent extends ModContent {
 
-	function takeContent($view_param, $page_id = null){
-		$result = $this->select($view_param, $page_id);
-		
-		return $result;
-	}
+    /**
+     * Get content 
+     * 
+     * @param string $view_param backend/frontend
+     * @param int $page_id id of page to view
+     * 
+     * @return array
+     */
+    function takeContent($view_param, $page_id = null){
+            $result = $this->select($view_param, $page_id);
+
+            return $result;
+    }
 	
-	function __construct(){
-		parent::__construct();
-		
-		
-		$action = (isset($_GET['action'])) ? $_GET['action'] : null ;
-		$id = (isset($_GET['id'])) ? $_GET['id'] : null ;
-		
-		if(strlen($action) > 0)
-			$this->manageAction($action, $id);
-	}
+    function __construct(){
+        parent::__construct();
+
+        $action = (isset($_GET['action'])) ? $_GET['action'] : null ;
+        $id = (isset($_GET['id'])) ? $_GET['id'] : null ;
+
+        if(strlen($action) > 0){
+            $this->manageAction($action, $id);
+        }
+    }
 	
-	function cCreate($post){
-		if(isset($post['create'])){
-			$_SESSION['errors'] = null;
-			
-			$processor = new FormProcessor_Content();
-			$processor->processor($post);
-		}
-		
-		$_POST = $post = null;
-		return require_once ROOT.DS.'views'.DS.'backend'.DS.'content'.DS.'create_tpl.php';	
-	}
+    function cCreate($post){
+        if(isset($post['create'])){
+            $_SESSION['errors'] = null;
+
+            $processor = new FormProcessor_Content();
+            $processor->processor($post);
+        }
+
+        $_POST = $post = null;
+        return require_once ROOT.DS.'views'.DS.'backend'.DS.'content'.DS.'create_tpl.php';	
+    }
 	
 	function manageAction($action, $id){
 			switch($action){
@@ -81,7 +90,7 @@ class ConContent extends ModContent {
 				}
 			break;
 			case('create'):
-				$this->cCreate($_POST);
+                            $this->cCreate($_POST);
 			break;
 		}
 	}
