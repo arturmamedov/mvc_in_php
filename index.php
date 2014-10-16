@@ -4,7 +4,7 @@ define('DS',DIRECTORY_SEPARATOR);
 $param = 'frontend';
 require_once ROOT.DS."views".DS."frontend".DS."view_content.php"; // vista contenuto con dati sui meta key etc.
 
-require_once ROOT.DS."config".DS."db.php";
+//require_once ROOT.DS."config".DS."db.php";
 
 require_once ROOT.DS."views".DS."frontend".DS."blocks".DS."head.php";
 
