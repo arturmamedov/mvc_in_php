@@ -1,8 +1,8 @@
 <?php
-if($_SERVER['HTTP_HOST'] == 'mvc.ex'){
-	require_once ROOT.DS."config".DS."conf.php";
+if(strstr($_SERVER['HTTP_HOST'], 'mvc.loc')){
+    require_once ROOT.DS."config".DS."conf.php";
 } else {
-	require_once ROOT.DS."config".DS."sconf.php";
+    require_once ROOT.DS."config".DS."sconf.php";
 }
 
 	class Db extends Conf {

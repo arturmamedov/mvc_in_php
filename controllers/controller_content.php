@@ -20,15 +20,15 @@ class ConContent extends ModContent {
 			$this->manageAction($action, $id);
 	}
 	
-	function cCreate($_POST){
-		if(isset($_POST['create'])){
+	function cCreate($post){
+		if(isset($post['create'])){
 			$_SESSION['errors'] = null;
 			
 			$processor = new FormProcessor_Content();
-			$processor->processor($_POST);
+			$processor->processor($post);
 		}
 		
-		$_POST = null;
+		$_POST = $post = null;
 		return require_once ROOT.DS.'views'.DS.'backend'.DS.'content'.DS.'create_tpl.php';	
 	}
 	

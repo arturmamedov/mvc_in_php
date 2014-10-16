@@ -16,15 +16,15 @@ class ConMenu extends ModMenu {
 		return $menu;
 	}
 	
-	function cCreateMenu($_POST){
-		if(isset($_POST['submit'])){
-			$_SESSION['errors'] = null;
-			
-			$processor = new FormProcessor_Menu();
-			$processor->processor($_POST);
+	function cCreateMenu($post){
+		if(isset($post['submit'])){
+                    $_SESSION['errors'] = null;
+
+                    $processor = new FormProcessor_Menu();
+                    $processor->processor($post);
 		}
 		
-		$_POST = null;
+		$_POST = $post = null;
 		return require_once ROOT.DS.'views'.DS.'backend'.DS.'menu'.DS.'form_createNew_tpl.php';	
 	}
 	

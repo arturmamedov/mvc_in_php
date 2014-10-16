@@ -12,7 +12,7 @@ class Mysqlimproved_Driver {
 		// Parametri di connessione
 		$host = 'localhost';
 		$user = 'root';
-		$password = 'qweqwe';
+		$password = '';
 		$database = 'mvc';
 		$charset = 'utf8';
 		

@@ -3,7 +3,7 @@
 	class Conf {
 		protected $DB_HOST	= 'localhost';
 		protected $DB_USER	= 'root';
-		protected $DB_PASS	= 'qweqwe';
+		protected $DB_PASS	= '';
 		protected $DB_NAME	= 'mvc';	
 		
 		static function debug($item){ // Funzione di debug 
